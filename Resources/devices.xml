@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <device uuid="An Example Device" kind="ipv4" address="1.2.3.4:9999"/>
+</root>

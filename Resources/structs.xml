@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <struct name="AnExampleStructDefinition">
+        <ivar name="aaa" type="float"/>
+        <ivar name="bbb" type="bool"/>
+        <ivar name="ccc" type="string"/>
+        <ivar name="data" type="data"/>
+    </struct>
+</root>
