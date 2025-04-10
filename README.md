@@ -1,7 +1,6 @@
 **[FLO - Distributed Hierarchical Dataflow](https://github.com/kk-0129/Flo)**
 
-Swift package:
-# FloApp
+Swift package: **FloApp**
 
 This package provides almost all the code necessary to build and run a macos Flo application. We do not provide a pre-compiled executable app here, but the steps to build one are straightforward:
 
