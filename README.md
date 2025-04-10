@@ -34,6 +34,29 @@ class Document : FloDocument{  }
 
 ## User-defined Structs
 
-The Resources
+The `structs.xml` file in the [Resources](Resources) folder can be used to specify application specific struct types. The default file just contains an example:
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;root>
+    &lt;struct name="Example">
+        &lt;ivar name="aaa" type="float"/>
+        &lt;ivar name="bbb" type="bool"/>
+        &lt;ivar name="ccc" type="string"/>
+        &lt;ivar name="data" type="data"/>
+    &lt;/struct>
+&lt;/root>
+</code></pre>
+  * each `struct` tag specifies a user-defined struct, which is just a list of `name` and `type` pairs (each given in a separate `ivar` tag). Valid types are `bool`, `float`, `string`, `data` (as shown above), but also any struct name (e.g. the built-in struct `Date`), and arrays of any of these, denoted by enclosing the type in square brackets (e.g. `[bool]` denotes an array of `bool`). Note that arrays of arrays are not supported.
 
 ## Remote devices 
+
+The `devices.xml` file in the [Resources](Resources) folder is used to define remote devices. The default file just contains an example:
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;root>
+    &lt;device uuid="An Example Device" kind="ipv4" address="1.2.3.4:9999"/>
+&lt;/root>
+</code></pre>
+  * each remote device is listed with a distinct `device` tag, with attributes:
+    * `uuid` = a name for the device (unique within the scope of this configuration file)
+    * `kind` = must be "ipv4" (only IPv4 is currently supported)
+    * `address` = the IPv4 address (with port number, formatted as shown) for the device.
+  * note that the term "remote" here just means that the device is accessed (using low-level sockets and UDP protocols) via its IP address. The 'devices' need not be physically distinct, and could be just software running on the same machine as the Flo application.
