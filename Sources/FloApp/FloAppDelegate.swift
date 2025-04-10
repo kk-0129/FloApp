@@ -27,14 +27,14 @@ import Flo2D
 import FloGraph
 import FloBox
 
-open class AppDelegate: NSObject, NSApplicationDelegate {
+open class FloAppDelegate: NSObject, NSApplicationDelegate {
     
     open func startup(_ hub:Hub){
         // override this method to add filters to the hub
     }
     
     open func takedown(_ hub:Hub){
-        // override this method to add filters to the hub
+        // override this method to add application specific clean-up code
     }
     
     public func applicationWillFinishLaunching(_ notification: Notification) {
